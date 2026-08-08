@@ -2,10 +2,14 @@ package com.schwab.aiengineering.urlshortener.exception;
 
 import com.schwab.aiengineering.urlshortener.dto.response.ErrorResponse;
 import jakarta.servlet.http.HttpServletRequest;
+import org.springframework.dao.DataAccessException;
 import org.springframework.http.HttpStatus;
+import org.springframework.http.ResponseEntity;
+import org.springframework.transaction.CannotCreateTransactionException;
 import org.springframework.web.bind.MethodArgumentNotValidException;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
 
 @RestControllerAdvice
@@ -74,5 +78,44 @@ public class GlobalExceptionHandler {
                 .path(request.getRequestURI())
                 .build();
     }
+
+//    @ExceptionHandler(CannotCreateTransactionException.class)
+//    public ErrorResponse handleDatabaseException(
+//            DataAccessException ex,
+//            HttpServletRequest request) {
+//
+//        return ErrorResponse.builder()
+//                .timestamp(LocalDateTime.now())
+//                .status(HttpStatus.SERVICE_UNAVAILABLE.value())
+//                .error("Service Unavailable")
+//                .message("The service is temporarily unavailable. Please try again later.")
+//                .path(request.getRequestURI())
+//                .build();
+//
+//    }
+
+
+    @ExceptionHandler({
+            DataAccessException.class,
+            CannotCreateTransactionException.class
+    })
+    public ResponseEntity<ErrorResponse> handleDatabaseException(
+            Exception ex,
+            HttpServletRequest request) {
+
+        ErrorResponse errorResponse = ErrorResponse.builder()
+                .timestamp(LocalDateTime.now())
+                .status(HttpStatus.SERVICE_UNAVAILABLE.value())
+                .error("Service Unavailable")
+                .message("The service is temporarily unavailable. Please try again later.")
+                .path(request.getRequestURI())
+                .build();
+
+        return ResponseEntity
+                .status(HttpStatus.SERVICE_UNAVAILABLE)
+                .body(errorResponse);
+    }
+
+
 
 }

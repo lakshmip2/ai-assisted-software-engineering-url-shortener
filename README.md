@@ -156,7 +156,7 @@ The solution includes multiple validation layers.
 - Exception Handling
 - API Validation
 - Manual Functional Testing
-- evidences showing swagger overview, create-url, redirect-url, analytics, delete-url, postgres db, h2-console screenshots
+- evidences showing swagger overview, create-url, redirect-url, analytics, delete-url, postgres db, h2-console, db reliability screenshots
 
 ---
 
