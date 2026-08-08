@@ -6,6 +6,20 @@ Identify potential technical and engineering risks associated with the implement
 
 ---
 
+## Trade offs and Decisions
+
+
+| Decision                      | Alternative           | Why chosen                        | Trade-off                         | Future option                           |
+| ----------------------------- | --------------------- | --------------------------------- | --------------------------------- | --------------------------------------- |
+| PostgreSQL                    | MongoDB/MySQL         | Structured data + consistency     | DB scaling needs planning         | HA/read replicas                        |
+| PostgreSQL as source of truth | Redis-only            | Durable persistence               | Higher read latency               | Redis cache                             |
+| Synchronous analytics         | Kafka                 | Simpler prototype                 | Analytics can add latency         | Async Kafka                             |
+| H2 + PostgreSQL validation    | PostgreSQL only       | Faster tests + real DB validation | H2 differs from PostgreSQL        | Testcontainers                          |
+| Simple architecture           | Redis/Kafka/HA        | Appropriate scope                 | Less production-scale resilience  | Evolve when needed                      |
+| Bounded DB timeout            | Unlimited/retry-heavy | Fail fast                         | Temporary failures may still fail | Carefully bounded retry/circuit breaker |
+
+
+
 # Risk Assessment
 
 | ID | Risk | Impact | Probability | Mitigation |

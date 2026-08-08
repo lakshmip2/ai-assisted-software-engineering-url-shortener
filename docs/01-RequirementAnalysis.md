@@ -92,6 +92,7 @@ The following design choices were made.
 | H2 | Faster local development |
 | Swagger | API discoverability |
 
+Decision → Alternatives considered → Rationale → Trade-off → Future evolution.
 
 ---
 
