@@ -103,3 +103,11 @@ AI functioned as a productivity accelerator rather than an autonomous developer.
 | AI-004 | Tests                  | Generate test cases     | JUnit tests          | Added negative/edge cases          | Edited            | 19 tests              | ServiceTest |
 | AI-005 | Code review            | Review implementation   | Findings             | Applied selected findings          | Accepted/Rejected | Build + tests         | Code        |
 | AI-006 | Documentation          | Draft assessment docs   | Documentation        | Reviewed/updated                   | Edited            | Document review       | docs        |
+
+| Task              | AI action                        | Outcome  | Engineer decision                                                | Validation                  |
+| ----------------- | -------------------------------- | -------- | ---------------------------------------------------------------- | --------------------------- |
+| Controller        | Generated initial implementation | Edited   | Accepted after review                                            | Tests                       |
+| Exception handler | Suggested DB failure handling    | Edited   | Added `CannotCreateTransactionException` handling                | PostgreSQL-down test        |
+| Test coverage     | Generated test cases             | Edited   | Removed redundant tests                                          | Coverage + tests            |
+| Docker            | Suggested containerization       | Rejected | Local environment couldn't support Docker; documented limitation | PostgreSQL local validation |
+| MapStruct         | Suggested/implemented            | Rejected | Removed to keep solution simpler                                 | Build/tests                 |
