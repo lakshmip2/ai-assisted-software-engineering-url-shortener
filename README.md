@@ -90,9 +90,8 @@ The application provides the following capabilities.
 ├── architecture
 ├── backend
 ├── docs
+    ──evidence──
 ├── prompts
-├── postman
-├── screenshots
 ├── .github
 ├── README.md
 └── LICENSE
@@ -157,7 +156,7 @@ The solution includes multiple validation layers.
 - Exception Handling
 - API Validation
 - Manual Functional Testing
-- evidences showing swagger overview, create-url, redirect-url, analytics, delete-url, postgres db screenshots
+- evidences showing swagger overview, create-url, redirect-url, analytics, delete-url, postgres db, h2-console screenshots
 
 ---
 
