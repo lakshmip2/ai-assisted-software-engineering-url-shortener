@@ -1,0 +1,20 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:urlshortener-test;DB_CLOSE_DELAY=-1;MODE=PostgreSQL
+    username: sa
+    password:
+    driver-class-name: org.h2.Driver
+  h2:
+    console:
+      enabled: false
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: create-drop
+
+    show-sql: false
+
+logging:
+  level:
+    root: INFO
+MODE: PostgreSQL

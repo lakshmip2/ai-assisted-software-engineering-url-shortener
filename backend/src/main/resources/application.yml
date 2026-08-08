@@ -12,8 +12,8 @@ spring:
 #    password:
   datasource:
     url: jdbc:postgresql://localhost:5432/urlshortener
-    username: postgres
-    password: postgres
+    username: urlshortener
+    password: ${DB_PASSWORD}
 
   jpa:
     hibernate:
