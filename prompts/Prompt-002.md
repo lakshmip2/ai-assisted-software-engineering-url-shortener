@@ -8,7 +8,6 @@ Generate a production-ready Maven configuration for a Spring Boot URL Shortener 
 - H2 for development
 - OpenAPI
 - Lombok
-- MapStruct
 - JaCoCo
 - JUnit5
 
@@ -17,7 +16,6 @@ Accepted with modifications.
 
 ## Changes
 - Added JaCoCo plugin.
-- Added MapStruct processor.
 - Included Actuator.
 - Configured Java 21 compiler.
 
