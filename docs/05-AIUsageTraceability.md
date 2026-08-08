@@ -111,3 +111,4 @@ AI functioned as a productivity accelerator rather than an autonomous developer.
 | Test coverage     | Generated test cases             | Edited   | Removed redundant tests                                          | Coverage + tests            |
 | Docker            | Suggested containerization       | Rejected | Local environment couldn't support Docker; documented limitation | PostgreSQL local validation |
 | MapStruct         | Suggested/implemented            | Rejected | Removed to keep solution simpler                                 | Build/tests                 |
+![03-redirect.png](evidence/03-redirect.png)
