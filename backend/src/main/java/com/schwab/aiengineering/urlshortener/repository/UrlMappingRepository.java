@@ -1,0 +1,18 @@
+package com.schwab.aiengineering.urlshortener.repository;
+
+import com.schwab.aiengineering.urlshortener.entity.UrlMapping;
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import java.util.Optional;
+import java.util.UUID;
+
+public interface UrlMappingRepository
+        extends JpaRepository<UrlMapping, UUID> {
+
+    Optional<UrlMapping> findByShortCode(String shortCode);
+
+    boolean existsByShortCode(String shortCode);
+
+    boolean existsByCustomAlias(String customAlias);
+
+}
