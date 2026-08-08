@@ -59,7 +59,6 @@ The application provides the following capabilities.
 | OpenAPI / Swagger | Latest |
 | JUnit 5 | Latest |
 | Mockito | Latest |
-| Docker | Latest |
 | GitHub Actions | CI |
 
 ---

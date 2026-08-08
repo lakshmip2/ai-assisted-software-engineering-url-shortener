@@ -91,7 +91,7 @@ The following design choices were made.
 | PostgreSQL | Production readiness |
 | H2 | Faster local development |
 | Swagger | API discoverability |
-| Docker | Environment consistency |
+
 
 ---
 

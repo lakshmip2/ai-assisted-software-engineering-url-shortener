@@ -16,7 +16,6 @@ Completed:
 - REST APIs
 - PostgreSQL/H2 Support
 - Swagger Documentation
-- Docker Support
 - GitHub Actions
 - Unit Tests
 - Documentation

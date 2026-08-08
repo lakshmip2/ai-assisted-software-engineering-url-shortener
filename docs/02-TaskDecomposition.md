@@ -11,7 +11,6 @@ Project Setup
 - Create Repository
 - Configure Maven
 - Configure Spring Boot
-- Docker Support
 - GitHub Actions
 
 ---
