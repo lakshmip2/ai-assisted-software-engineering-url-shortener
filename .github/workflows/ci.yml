@@ -1,0 +1,9 @@
+Checkout
+↓
+Set up JDK 21
+↓
+mvn clean verify
+↓
+Tests
+↓
+JaCoCo
