@@ -554,3 +554,19 @@ Monitoring requirements
 Maintenance cost
 
 Therefore, the assessment implementation focuses on a clean and testable Spring Boot application while documenting a realistic path toward production-scale architecture.
+
+## 5. Key architectural decisions:
+| Problem                              | Potential Solution              |
+| ------------------------------------ | ------------------------------- |
+| High redirect latency                | Redis                           |
+| High read volume                     | Redis + database optimization   |
+| Increased application traffic        | Horizontal scaling              |
+| Multiple API consumers               | API Gateway                     |
+| API abuse                            | Rate limiting                   |
+| Analytics affecting redirect latency | Kafka / asynchronous processing |
+| Database read pressure               | Read replicas                   |
+| Multiple services                    | Distributed tracing             |
+| Production operational visibility    | Metrics + logs + alerts         |
+| Frequent deployments                 | CI/CD + rolling deployment      |
+| High availability requirements       | Multi-instance / HA deployment  |
+
