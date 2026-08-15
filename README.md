@@ -164,7 +164,7 @@ Indexing, connection pooling, read replicas, and high-availability configuration
 
 Detailed scalability analysis:
 
-`docs/14-ScalabilityAndPerformance.md`
+`docs/17-ScalabilityAndPerformance.md`
 
 ---
 
@@ -348,7 +348,7 @@ ai-assisted-software-engineering-url-shortener/
 │
 ├── docs/
 │   ├── 03-SystemArchitecture.md
-│   ├── 14-ScalabilityAndPerformance.md
+│   ├── 17-ScalabilityAndPerformance.md
 │   ├── Architecture Decision Records
 │   └── Assessment Documentation
 │
